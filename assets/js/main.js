@@ -65,7 +65,7 @@ while (bombs.length < 16) {
     const bomb = Math.floor(Math.random() * 100) + 1;
     if (bombs.indexOf(bomb) === -1) bombs.push(bomb);
 }
-console.log('elenco bombe ' +  bombs);
+console.log('elenco bombe ' + bombs);
 
 
 buttonGenerate.addEventListener('click', function () {
@@ -82,9 +82,17 @@ buttonGenerate.addEventListener('click', function () {
         containerGrid.insertAdjacentElement('beforeend', cellMarkUp);
 
         cellMarkUp.addEventListener('click', function () {
-            cellMarkUp.style.backgroundColor = 'lightblue';
-            console.log('hai cliccato il numero ' + cellMarkUp.innerText);
+
+
+            if (cellMarkUp.innerText === bombs) {
+                console.log('hai cliccato su una bomba' + cellMarkUp.innerText);
+                cellMarkUp.style.backgroundColor = 'red';
+            } else {
+                cellMarkUp.style.backgroundColor = 'lightblue';
+                console.log('hai cliccato il numero ' + cellMarkUp.innerText);
+            }
         })
+
     }
 })
 
