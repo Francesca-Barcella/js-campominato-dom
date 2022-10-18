@@ -1,0 +1,32 @@
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;;
+}
+
+.container{
+    max-width: 1200px;
+    margin: auto;
+    display: flex;
+    flex-wrap: wrap;
+    padding: 1.5rem 0;
+}
+
+.cell{
+    /* width: calc(100% / 10);  *//* togliere in futuro quando lo faremo dinamico per i bonus*/
+    border: 1px solid black;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 1rem;
+}
+
+.blue{
+    background-color: green;
+}
+
+.genera{
+    padding: 0.5rem;
+    border-radius: 1rem;
+}
